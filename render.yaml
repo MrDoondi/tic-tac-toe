@@ -1,0 +1,28 @@
+services:
+  # Backend WebSocket Server
+  - type: web
+    name: tic-tac-toe-backend
+    env: node
+    plan: free
+    buildCommand: npm install ws
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+
+  # Frontend React App
+  - type: web
+    name: tic-tac-toe-frontend
+    env: static
+    plan: free
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./build
+    envVars:
+      - key: REACT_APP_WEBSOCKET_URL
+        value: wss://tic-tac-toe-backend.onrender.com
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html 

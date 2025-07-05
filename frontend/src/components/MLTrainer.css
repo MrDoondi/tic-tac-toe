@@ -1,0 +1,251 @@
+.ml-trainer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.ml-trainer {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 2px solid #3b82f6;
+}
+
+.ml-trainer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #3b82f6;
+}
+
+.ml-trainer-header h2 {
+  color: white;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.close-button:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.ml-trainer-content {
+  color: white;
+}
+
+.training-section, .model-section, .info-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.training-section h3, .model-section h3, .info-section h3 {
+  color: #3b82f6;
+  margin: 0 0 15px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.training-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.training-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.training-controls input {
+  padding: 10px 15px;
+  border: 2px solid #374151;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+}
+
+.training-controls input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.train-button {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.train-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.train-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.training-progress {
+  margin-top: 20px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+.model-controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.model-controls button {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.model-controls button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3);
+}
+
+.model-controls button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.model-stats h4 {
+  color: #10b981;
+  margin: 0 0 15px 0;
+  font-size: 1.1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.stat-label {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.stat-value {
+  color: #3b82f6;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.info-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-section li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.info-section li:last-child {
+  border-bottom: none;
+}
+
+.info-section li strong {
+  color: #3b82f6;
+  margin-right: 10px;
+  min-width: 120px;
+}
+
+@media (max-width: 768px) {
+  .ml-trainer {
+    padding: 20px;
+    width: 95%;
+  }
+  
+  .model-controls {
+    flex-direction: column;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+} 
