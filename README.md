@@ -2,7 +2,7 @@
 
 ![Tic Tac Toe](https://img.shields.io/badge/Status-Completed-brightgreen) ![Python](https://img.shields.io/badge/Language-Python-blue) ![License](https://img.shields.io/badge/License-MIT-orange)
 
-A **classic Tic Tac Toe game** with an interactive interface. Play against a friend or challenge the AI (if implemented) and test your strategy skills!  
+A **classic Tic Tac Toe game** with an interactive interface. Play against a friend or challenge the AI and test your strategy skills!  
 
 ---
 
@@ -32,18 +32,4 @@ This project demonstrates **logical thinking, game algorithms, and interactive d
 - Clear console or GUI interface
 - Detects win, loss, and draw automatically
 - Easily modifiable and extendable
-
 ---
-
-## 🎬 Demo
-
-![Tic Tac Toe Demo](link-to-your-demo.gif)  
-*Replace with GIF or screenshot of your project in action*
-
----
-
-## 🛠 Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/tic-tac-toe.git
